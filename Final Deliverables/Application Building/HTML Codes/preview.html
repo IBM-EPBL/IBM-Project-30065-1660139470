@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='/static/css/main.css' />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_style.css')}}">
+    <meta charset="UTF-8">
+    <title>Admission Prediction</title>
+</head>
+<body>
+ <nav>
+    <div class="menu">
+      <div class="logo">
+            </div>
+      <ul>
+        <li><a href="home">Home</a></li>
+          <li><a href="login">Login</a></li>
+          <li><a href="upload">Upload</a></li>
+      </ul>
+    </div>
+  </nav>
+{{ data_var|safe }}
+<div class="input-form">
+  <form action="/input_data" >
+      <button type="submit" >CLICK TEST</button>
+<!--        <input type="submit" value="Click Train|Test" />-->
+    </form>
+    </div>
+</body>
+</html>
