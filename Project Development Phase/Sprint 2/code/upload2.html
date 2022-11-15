@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='/static/css/main.css' />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_style.css')}}">
+  </head>
+  <body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+            </div>
+      <ul>
+        <li><a href="home">Home</a></li>
+          <li><a href="login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+    <h1>UPLAOD</h1>
+
+    <form method="POST" enctype="multipart/form-data" action="/">
+        <input type="file" id="myFile" name="uploaded-file" accept=".csv">
+        <input type="submit" value="Upload file">
+    </form>
+  <br>
+  <p style="color:green;">file uploaded successfully</p>
+  <form action="/show_data">
+        <input type="submit" value="Preview" />
+    </form>
+  {{ data_var|safe }}
+  </body>
+</html>
