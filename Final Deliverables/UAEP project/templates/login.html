@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/design.css')}}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="op">
+<nav>
+    <div class="menu">
+      <div class="logo">
+            </div>
+      <ul>
+        <li><a href="home">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+<center>
+<section class="input-form">
+<font size="6">
+<nav>
+<br><a class="top-form">WELCOME</a><br><br>
+</nav>
+</font>
+<div class="input-form">
+<form autocomplete="on" action="/form_login" method="post" name="sform" style="opacity:1;" >
+<label>Username:</label>
+<input type="text"  name="username"><br><br>
+<label>Password:</label>
+<input type="password" name="password" ><br><br>
+<button type="submit" name="submit" > LOGIN</button>
+<button type="reset">RESET</button>
+</form>
+<h1>{{info}}</h1>
+</div>
+</section>
+</center>
+</body>
+
+</html>
